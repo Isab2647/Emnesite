@@ -10,9 +10,47 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
+.grid_1_1 {
+  padding-top: 4em;
+}
+
+.grid_11 {
+  padding-top: 4em;
+  justify-self: center;
+}
+
 .liste ol {
   list-style-type: none;
+  justify-self: left;
+  padding-top: 3em;
+  padding-left: 12em;
 }
+
+.max-width {
+  padding: 10em;
+  align-items: center;
+}
+
+.overskrift {
+  margin: auto;
+  padding-left: 2em;
+}
+.overskrift_2 {
+  padding-right: 2em;
+}
+.tekst {
+  border: solid 1px #d4d4d4;
+  padding: 1em;
+  box-shadow: 1px 1px 14px 8px rgb(0 0 0 / 20%);
+  background-color: white;
+}
+.tekst,
+h2,
+p {
+  justify-self: center;
+  padding-bottom: 1em;
+}
+
 .grid-1-12 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -20,6 +58,8 @@
   gap: 10px;
   max-width: 750px;
   margin: auto;
+  padding-top: 5em;
+  padding-bottom: 10em;
 }
 
 .order {
@@ -28,7 +68,7 @@
 
 .grid-1-12 img {
   width: 100%;
-  max-width: 300px;
+  padding: 2em;
   height: auto;
   border-radius: 8px;
 }
@@ -36,9 +76,15 @@
 .top-row {
   grid-column: 1 / -1;
   display: flex;
-  gap: 20px;
+
   align-items: center;
+  border-radius: 5%;
+  list-style-position: inside;
 }
+/* .top-row,
+p {
+  padding-left: 2em;
+} */
 
 section .top-row {
   background-color: #e7d9c6;
@@ -64,9 +110,10 @@ section .top-row {
   margin-top: 2em;
 }
 
-.grid_1 {
+/* .grid_1 {
   margin-top: 5em;
-}
+} */
+
 .grid_1 .billede-container {
   grid-area: 1 / 1;
   place-self: center;
@@ -87,8 +134,8 @@ section .top-row {
   gap: 50px;
   margin-left: 218px;
   margin-top: 5em;
-  
 }
+
 .grid-1-1-1 img {
   flex: 1;
   height: 300px;
@@ -102,18 +149,31 @@ section .top-row {
 .grid_1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 2em;
-  padding-top: 10em;
+  gap: 6em;
+  /* padding-top: 10em; */
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 8em;
+  justify-self: center;
 }
 
+.profilbillede {
+  width: 215px;
+
+  justify-self: center;
+  padding-top: 13em;
+}
+
+.profilbillede img {
+  border-radius: 50%;
+}
 .card {
-  background-color: #e7d9c6;
-  border: 2px solid;
+  border: 2px solid 1px #d4d4d4;
   padding: 16px; /* Luft indeni boksen */
   max-width: 300px;
   margin: 20px auto; /* Centrerer den på siden */
   text-align: center;
+  box-shadow: 1px 1px 14px 8px rgb(0 0 0 / 20%);
 }
 
 .grid-1-1-1-1 {
@@ -131,18 +191,20 @@ section .top-row {
   width: 50%;
   margin: auto;
   /* margin-top: -70px; */
-  margin-top: 2em;
+  margin-top: 3em;
+  padding-bottom: 8em;
 }
 
 .center {
-  text-align: center;
+  justify-self: center;
+  padding-top: 1em;
 }
 
 .billede {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px;
+  padding-top: 3em;
   margin: auto;
   width: 50%;
   margin-top: -2em;
@@ -157,11 +219,9 @@ section .top-row {
   width: 30%;
 }
 
-.profilbillede {
-  width: 200px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 15%;
+.footer,
+p {
+  justify-self: left;
 }
 
 .dropdown {
@@ -206,6 +266,7 @@ section .top-row {
   margin: 12px 0;
   color: #000000;
   font-size: 16px;
+  text-align: left;
 }
 
 /* Vis dropdown når checkbox er aktiveret */
@@ -217,14 +278,6 @@ section .top-row {
 /* nav ol {
   display: flex;
 } */
-
-.max-width {
-  padding: 10em;
-  align-items: center;
-}
-.tekst {
-  text-align: left;
-}
 
 /* @media (width >=550px) {
 }
@@ -242,17 +295,83 @@ section .top-row {
 @media (width < 800px) {
   .grid_1-1 {
     gap: 15px;
+    justify-self: center;
     display: block;
+    padding: 0;
+  }
+
+  .grid_1-1,
+  p {
+    width: 112%;
+    justify-self: center;
+  }
+
+  .grid_1-1,
+  h2 {
+    justify-self: center;
+  }
+
+  .center {
+    padding-bottom: 4em;
   }
 
   .grid-1-1-1 {
     display: block;
-    align-content: center;
+    justify-self: center;
     width: 300px;
+    margin: 0;
+    padding-top: 2em;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
   }
-}
-@media (width < 1311) {
-  h1 {
-    font-size: 30;
+
+  .billede {
+    width: 100%;
+    justify-content: center;
+  }
+  .billede2 {
+    width: 400px;
+    justify-content: center;
+  }
+  .dropbtn {
+    width: 150%;
+  }
+  .dropdown-content {
+    width: 150%;
+  }
+  .grid-1-12 {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 5em;
+  }
+  .top-row {
+    display: block;
+    justify-items: center;
+  }
+
+  .top-row p {
+    padding-top: 2em;
+    padding-left: 2em;
+  }
+
+  .top-row h3 {
+    text-align: center;
+    padding-top: 2em;
+  }
+
+  .top-row li {
+    padding-left: 2em;
+  }
+
+  .max-width {
+    padding: 5em;
+  }
+  .text {
+    width: 78%;
+    padding-bottom: 5em;
+  }
+
+  .grid_1 {
+    padding-top: 2em;
   }
 }

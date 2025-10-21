@@ -6,7 +6,9 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
+main{
+  background-color: rgb(250, 249, 255);
+}
 h1 {
   color: white;
 }
@@ -32,7 +34,7 @@ nav {
 footer {
   background-color: #c5d2e2;
   padding: 5em;
-  margin-top: 200px;
+  
 }
 
 header {
