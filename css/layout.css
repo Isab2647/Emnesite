@@ -168,12 +168,13 @@ section .top-row {
   border-radius: 50%;
 }
 .card {
-  border: 2px solid 1px #d4d4d4;
+  border: 1px solid #d4d4d4;
   padding: 16px; /* Luft indeni boksen */
   max-width: 300px;
   margin: 20px auto; /* Centrerer den på siden */
   text-align: center;
   box-shadow: 1px 1px 14px 8px rgb(0 0 0 / 20%);
+  background-color: white;
 }
 
 .grid-1-1-1-1 {
