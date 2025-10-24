@@ -19,6 +19,105 @@
   justify-self: center;
 }
 
+.grid-1-12 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  max-width: 750px;
+  margin: auto;
+  padding-top: 5em;
+  padding-bottom: 10em;
+}
+
+.grid-1-12 img {
+  width: 100%;
+  padding: 2em;
+  height: auto;
+  border-radius: 8px;
+}
+
+.grid_1 {
+  grid-row: 1;
+  grid-column: 1;
+  text-align: center;
+}
+
+.grid-1-1-1 {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  margin-left: 218px;
+  margin-top: 5em;
+}
+
+.grid-1-1-1 img {
+  flex: 1;
+  height: 300px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8%;
+  object-fit: cover;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6em;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 8em;
+  justify-self: center;
+}
+.grid-1-1-1-1 {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.grid_1 .billede-container {
+  grid-area: 1 / 1;
+  place-self: center;
+}
+.billede-container img {
+  grid-row: 1;
+  grid-column: 1;
+}
+.top-row {
+  grid-column: 1 / -1;
+  display: flex;
+
+  align-items: center;
+  border-radius: 5%;
+  list-style-position: inside;
+}
+.order {
+  order: -1;
+}
+section .top-row {
+  background-color: #ffffff;
+  box-shadow: 1px 1px 14px 8px rgb(0 0 0 / 20%);
+}
+.billede-container {
+  display: grid;
+  align-items: center;
+}
+.profilbillede {
+  width: 215px;
+
+  justify-self: center;
+  padding-top: 13em;
+}
+.forsideh2 {
+  margin-top: 10em;
+}
+
+.forsideh2 p {
+  margin-top: 2em;
+}
 .liste ol {
   list-style-type: none;
   justify-self: left;
@@ -51,125 +150,17 @@ p {
   padding-bottom: 1em;
 }
 
-.grid-1-12 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 10px;
-  max-width: 750px;
-  margin: auto;
-  padding-top: 5em;
-  padding-bottom: 10em;
-}
-
-.order {
-  order: -1;
-}
-
-.grid-1-12 img {
-  width: 100%;
-  padding: 2em;
-  height: auto;
-  border-radius: 8px;
-}
-
-.top-row {
-  grid-column: 1 / -1;
-  display: flex;
-
-  align-items: center;
-  border-radius: 5%;
-  list-style-position: inside;
-}
-
-section .top-row {
-  background-color: #ffffff;
-  box-shadow: 1px 1px 14px 8px rgb(0 0 0 / 20%);
-}
-
-.grid_1 {
-  grid-row: 1;
-  grid-column: 1;
-  text-align: center;
-}
-
-.forsideh2 {
-  margin-top: 10em;
-}
-
-.forsideh2 p {
-  margin-top: 2em;
-}
-
-
-.grid_1 .billede-container {
-  grid-area: 1 / 1;
-  place-self: center;
-}
-.billede-container img {
-  grid-row: 1;
-  grid-column: 1;
-}
-
-.billede-container {
-  display: grid;
-  align-items: center;
-}
-
-.grid-1-1-1 {
-  display: flex;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 50px;
-  margin-left: 218px;
-  margin-top: 5em;
-}
-
-.grid-1-1-1 img {
-  flex: 1;
-  height: 300px;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 8%;
-  object-fit: cover;
-}
-
-.grid_1-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6em;
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-bottom: 8em;
-  justify-self: center;
-}
-
-.profilbillede {
-  width: 215px;
-
-  justify-self: center;
-  padding-top: 13em;
-}
-
 .profilbillede img {
   border-radius: 50%;
 }
 .card {
   border: 1px solid #d4d4d4;
-  padding: 16px; 
+  padding: 16px;
   max-width: 300px;
-  margin: 20px auto; 
+  margin: 20px auto;
   text-align: center;
   box-shadow: 1px 1px 14px 8px rgb(0 0 0 / 20%);
   background-color: white;
-}
-
-.grid-1-1-1-1 {
-  display: flex;
-  list-style-type: none;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
 }
 
 .text {
@@ -218,7 +209,6 @@ p {
   box-sizing: border-box;
 }
 
-
 .dropdown input[type="checkbox"] {
   display: none;
 }
@@ -236,7 +226,6 @@ p {
   text-align: left;
 }
 
-
 .dropdown-content {
   max-height: 0;
   overflow: hidden;
@@ -248,7 +237,6 @@ p {
   transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
-
 .dropdown-content p {
   margin: 12px 0;
   color: #000000;
@@ -256,12 +244,10 @@ p {
   text-align: left;
 }
 
-
 .dropdown input[type="checkbox"]:checked + label + .dropdown-content {
-  max-height: 500px; 
+  max-height: 500px;
   padding: 15px 20px;
 }
-
 
 @media (width < 800px) {
   .grid_1-1 {
